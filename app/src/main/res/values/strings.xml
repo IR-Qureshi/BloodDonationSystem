@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BloodDonationSystem</string>
+    <string-array name="BloodGroup">
+        <item>Blood Group</item>
+        <item>A positive</item>
+        <item>B positive</item>
+        <item>O positive</item>
+        <item>A negative</item>
+        <item>B negative</item>
+        <item>O negative</item>
+    </string-array>
 </resources>

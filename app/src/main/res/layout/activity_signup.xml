@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
         android:id="@+id/SpinnerAdd"
-        />
+        android:entries="@array/BloodGroup"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

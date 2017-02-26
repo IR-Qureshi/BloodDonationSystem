@@ -27,12 +27,14 @@
         android:layout_gravity="center_horizontal"
         android:text="log in"
         android:layout_marginTop="40dp"
-        android:id="@+id/Btn_login"/>
+        android:id="@+id/Btn_login"
+        android:onClick="Signin"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:id="@+id/TextSignup"/>
+        android:id="@+id/TextSignup"
+        android:onClick="Signup"/>
 </LinearLayout>
