@@ -2,6 +2,8 @@ package com.example.dellpc.blooddonationsystem;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,6 +25,10 @@ public class ActivityHome extends AppCompatActivity
     TextView currentUserBG;
     private FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListner;
+    //fragments..
+    FragmentManager mFragmentManager;
+    FragmentTransaction mFragmentTransaction;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +54,6 @@ public class ActivityHome extends AppCompatActivity
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             String name = extras.getString("username");
-            Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             View HeadView = navigationView.getHeaderView(0);
             currentUser = (TextView)HeadView.findViewById(R.id.NavUserName);
@@ -129,12 +133,18 @@ public class ActivityHome extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_MyRequests) {
 
         } else if (id == R.id.nav_notification) {
 
         } else if (id == R.id.nav_postReq) {
+
+            //set the post req in fragment in frame layout.
+
+            mFragmentManager = getSupportFragmentManager();
+            mFragmentTransaction = mFragmentManager.beginTransaction();
+            mFragmentTransaction.replace(R.id.FrameHome, new FragmentPostReq()).commit();
 
         } else if (id == R.id.nav_setting) {
 

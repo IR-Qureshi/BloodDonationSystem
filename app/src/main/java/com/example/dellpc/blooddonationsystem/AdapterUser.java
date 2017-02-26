@@ -30,12 +30,12 @@ public class AdapterUser extends ArrayAdapter<ClassUser> {
             convertView = ((Activity)getContext()).getLayoutInflater().inflate(R.layout.nav_header_activity_home,parent, false);
         }
         TextView userNameNav = (TextView) convertView.findViewById(R.id.NavUserName);
-        TextView userBGNav = (TextView) convertView.focusSearch(R.id.NavUserBG);
+        //TextView userBGNav = (TextView) convertView.focusSearch(R.id.NavUserBG);
 
         ClassUser user = getItem(position);
 
         userNameNav.setText(user.getFirstName());
-        userBGNav.setText((user.getBloodGroup()));
+       // userBGNav.setText((user.getBloodGroup()));
         return convertView;
     }
 }
