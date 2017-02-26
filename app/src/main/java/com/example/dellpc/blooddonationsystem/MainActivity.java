@@ -59,8 +59,9 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
+
+    //sign in with existing user
     public void Signin(View view){
-        //sign in with existing user
         mFirebaseAuth.signInWithEmailAndPassword(EditUserText.getText().toString(),EditPassText.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
+                        Toast.makeText(MainActivity.this, "Signed in", Toast.LENGTH_SHORT).show();
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(MainActivity.this,"User not exists",
