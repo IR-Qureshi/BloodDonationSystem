@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         Toast.makeText(MainActivity.this, "Signed in", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, ActivityHome.class);
+                        startActivity(intent);
+
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(MainActivity.this,"User not exists",
