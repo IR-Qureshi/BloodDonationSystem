@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         // signed in user can be handled in the listener.
                         Toast.makeText(MainActivity.this, "Signed in", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, ActivityHome.class);
+                        intent.putExtra("username",EditUserText.getText().toString());
                         startActivity(intent);
 
                         if (!task.isSuccessful()) {
