@@ -43,6 +43,7 @@
         android:id="@+id/BtnSignUp"
         android:text="sign up"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:onClick="SignUp2"/>
 
 </LinearLayout>
