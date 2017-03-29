@@ -122,7 +122,6 @@ public class ActivityHome extends AppCompatActivity
             FirebaseAuth.getInstance().signOut();
         }
 
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -133,6 +132,7 @@ public class ActivityHome extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
+            
 
         } else if (id == R.id.nav_MyRequests) {
 

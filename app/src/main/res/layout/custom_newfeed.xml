@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CLUname"
+        android:text="Name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CLUnits_group"
+        android:text="unit_group"
+        android:layout_below="@id/CLUname"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CLHosp_relation"
+        android:text="hospital_relation"
+        android:layout_below="@id/CLUnits_group"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urgecy:"
+        android:textStyle="bold"
+        android:layout_below="@id/CLHosp_relation"
+        android:id="@+id/textview"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="urgency"
+        android:id="@+id/CLurgency"
+        android:layout_toRightOf="@id/textview"
+        android:layout_below="@id/CLHosp_relation"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Instructions:"
+        android:layout_below="@id/CLurgency"
+        android:id="@+id/textview2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add instructions"
+        android:id="@+id/CLaddInst"
+        android:layout_below="@id/CLurgency"
+        android:layout_toRightOf="@id/textview2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volunters uptil now:"
+        android:layout_below="@id/CLaddInst"
+        android:id="@+id/textview3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/CLvolNow"
+        android:layout_below="@id/CLaddInst"
+        android:layout_toRightOf="@id/textview3"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Requirements:"
+        android:layout_below="@id/CLvolNow"
+        android:id="@+id/textview4"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CLcurrReq"
+        android:text="0"
+        android:layout_below="@id/CLvolNow"
+        android:layout_toRightOf="@id/textview4"/>
+</RelativeLayout>

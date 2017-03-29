@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -19,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
  * A simple {@link Fragment} subclass.
  */
 public class FragmentPostReq extends Fragment {
-
+    private static final String TAG = "MainActivity";
     Spinner spinBG;
     Spinner spinNoReq;
     Spinner spinUrgency;
@@ -71,7 +72,7 @@ public class FragmentPostReq extends Fragment {
             public void onClick(View v) {
                 mClassPostReq = new ClassPostReq(spinBG.getSelectedItem().toString(),spinNoReq.getSelectedItem().toString(),spinUrgency.getSelectedItem().toString(),spinCountry.getSelectedItem().toString(),spinState.getSelectedItem().toString(),spinCity.getSelectedItem().toString(),spinHospital.getSelectedItem().toString(),spinRelation.getSelectedItem().toString(),editContactNo.getText().toString(),editAddInfo.getText().toString());
                 mUserDatabaseReference.push().setValue(mClassPostReq);
-
+                Toast.makeText(getActivity(), "Successfully posted your updates", Toast.LENGTH_SHORT).show();
             }
         });
 
