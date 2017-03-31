@@ -30,6 +30,7 @@ public class ActivityHome extends AppCompatActivity
     FragmentTransaction mFragmentTransaction;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,8 @@ public class ActivityHome extends AppCompatActivity
 //            }
 //        };
 
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHome,new FragmentNewFeeds()).commit();
 
         //adding a current user
         Bundle extras = getIntent().getExtras();
@@ -132,21 +135,28 @@ public class ActivityHome extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHome,new FragmentNewFeeds()).commit();
+
+
 
         } else if (id == R.id.nav_MyRequests) {
+//            mFragmentManager = getSupportFragmentManager();
+//            mFragmentTransaction = mFragmentManager.beginTransaction();
+//            mFragmentTransaction.replace(R.id.fragmentHome, new FragmentNewFeeds()).commit();
+
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHome,new FragmentNewFeeds()).commit();
 
         } else if (id == R.id.nav_notification) {
 
+           // getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHome,new FragmentNewFeeds()).commit();
         } else if (id == R.id.nav_postReq) {
 
-            //set the post req in fragment in frame layout.
-
-            mFragmentManager = getSupportFragmentManager();
-            mFragmentTransaction = mFragmentManager.beginTransaction();
-            mFragmentTransaction.replace(R.id.FrameHome, new FragmentPostReq()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHome,new FragmentPostReq()).commit();
 
         } else if (id == R.id.nav_setting) {
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHome,new FragmentNewFeeds()).commit();
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

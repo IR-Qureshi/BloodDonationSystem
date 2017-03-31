@@ -22,7 +22,6 @@ public class AdapterPostReq extends ArrayAdapter<ClassPostReq> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView =  super.getView(position, convertView, parent);
         if(convertView == null){
             convertView = ((Activity)getContext()).getLayoutInflater().inflate(R.layout.custom_newfeed,parent,false);
         }
@@ -37,7 +36,7 @@ public class AdapterPostReq extends ArrayAdapter<ClassPostReq> {
         ClassPostReq classPostReq = getItem(position);
         ClassUser classUser = new ClassUser();
 
-        name.setText(classUser.getFirstName());
+        name.setText("name");
         unit.setText(classPostReq.getNoUnits());
         relation.setText(classPostReq.getRelation());
         urgency.setText(classPostReq.getUrgency());

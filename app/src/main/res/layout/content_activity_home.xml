@@ -13,4 +13,9 @@
     tools:context="com.example.dellpc.blooddonationsystem.ActivityHome"
     tools:showIn="@layout/app_bar_activity_home">
 
+    <FrameLayout
+        android:id="@+id/fragmentHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </FrameLayout>

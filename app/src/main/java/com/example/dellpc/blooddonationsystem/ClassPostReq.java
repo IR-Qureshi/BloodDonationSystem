@@ -16,6 +16,9 @@ public class ClassPostReq {
     String contact;
     String addIns;
 
+    public ClassPostReq(){
+
+    }
     public ClassPostReq(String bloodGroup, String noUnits, String urgency, String country, String state, String city, String hospital, String relation, String contact, String addIns){
         this.bloodGroup = bloodGroup;
         this.noUnits = noUnits;

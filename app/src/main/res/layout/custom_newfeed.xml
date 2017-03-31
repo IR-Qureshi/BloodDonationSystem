@@ -74,4 +74,17 @@
         android:text="0"
         android:layout_below="@id/CLvolNow"
         android:layout_toRightOf="@id/textview4"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volunteer"
+        android:id="@+id/BtnVolunteer"
+        android:layout_below="@id/CLcurrReq"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment"
+        android:id="@+id/BtnComment"
+        android:layout_below="@id/CLcurrReq"
+        android:layout_toRightOf="@id/BtnVolunteer"/>
 </RelativeLayout>

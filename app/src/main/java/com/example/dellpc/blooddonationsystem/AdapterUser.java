@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.List;
+
 /**
  * Created by dell pc on 26-Feb-17.
  */
@@ -17,11 +19,9 @@ public class AdapterUser extends ArrayAdapter<ClassUser> {
 //        super(context, resource, objects);
 //    }
 
-    public AdapterUser(Context context, int resource, int textViewResourceId) {
-        super(context, resource, textViewResourceId);
+    public AdapterUser(Context context, int resource, List<ClassUser> objects) {
+        super(context, resource, objects);
     }
-
-
 
     @NonNull
     @Override
